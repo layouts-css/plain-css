@@ -1,0 +1,429 @@
+/*
+layout-css
+Repo: https://github.com/layout-css/plain-css/
+Author: Wayne Allan
+Email: wayne@jellybeanjar.io
+*/
+
+/*
+Sets the height of the body and html to 100% so that the layout classes work properly.
+ */
+body,
+html {
+  height: 100%;
+  width: 100%;
+}
+
+/* Sizing Layout Classes */
+
+/* Hugs the content  */
+.w-hug {
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.h-hug {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.s-hug {
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+/* Fills to the remainging space of the parent */
+.w-fill {
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+.layout-packed-tl-x > .h-fill,
+.layout-packed-tc-x > .h-fill,
+.layout-packed-tr-x > .h-fill,
+.layout-packed-ml-x > .h-fill,
+.layout-packed-mc-x > .h-fill,
+.layout-packed-mr-x > .h-fill,
+.layout-packed-bl-x > .h-fill,
+.layout-packed-bc-x > .h-fill,
+.layout-packed-br-x > .h-fill,
+.layout-spaced-t > .h-fill,
+.layout-spaced-m > .h-fill,
+.layout-spaced-b > .h-fill,
+.layout-packed-tl-x > .s-fill,
+.layout-packed-tc-x > .s-fill,
+.layout-packed-tr-x > .s-fill,
+.layout-packed-ml-x > .s-fill,
+.layout-packed-mc-x > .s-fill,
+.layout-packed-mr-x > .s-fill,
+.layout-packed-bl-x > .s-fill,
+.layout-packed-bc-x > .s-fill,
+.layout-packed-br-x > .s-fill,
+.layout-spaced-t > .s-fill,
+.layout-spaced-m > .s-fill,
+.layout-spaced-b > .s-fill {
+  --layout-align-self: stretch;
+  --layout-flex-grow: auto;
+}
+
+.layout-packed-tl-y > .h-fill,
+.layout-packed-tc-y > .h-fill,
+.layout-packed-tr-y > .h-fill,
+.layout-packed-ml-y > .h-fill,
+.layout-packed-mc-y > .h-fill,
+.layout-packed-mr-y > .h-fill,
+.layout-packed-bl-y > .h-fill,
+.layout-packed-bc-y > .h-fill,
+.layout-packed-br-y > .h-fill,
+.layout-spaced-l > .h-fill,
+.layout-spaced-c > .h-fill,
+.layout-spaced-r > .h-fill,
+.layout-packed-tl-y > .s-fill,
+.layout-packed-tc-y > .s-fill,
+.layout-packed-tr-y > .s-fill,
+.layout-packed-ml-y > .s-fill,
+.layout-packed-mc-y > .s-fill,
+.layout-packed-mr-y > .s-fill,
+.layout-packed-bl-y > .s-fill,
+.layout-packed-bc-y > .s-fill,
+.layout-packed-br-y > .s-fill,
+.layout-spaced-l > .s-fill,
+.layout-spaced-c > .s-fill,
+.layout-spaced-r > .s-fill {
+  --layout-align-self: auto;
+  --layout-flex-grow: 1;
+}
+
+.h-fill {
+  align-self: var(--layout-align-self, auto);
+  flex-grow: var(--layout-flex-grow, 1);
+  height: 100%;
+}
+
+.s-fill {
+  align-self: var(--layout-align-self, auto);
+  flex-grow: var(--layout-flex-grow, 1);
+  height: 100%;
+
+  width: 100%;
+  width: -moz-available;
+  width: -webkit-fill-available;
+  width: fill-available;
+}
+
+/* Fixes the width or height with css variables */
+.w-fixed-n {
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: var(--w);
+}
+
+.h-fixed-n {
+  flex-grow: 0;
+  flex-shrink: 1;
+  height: var(--h);
+}
+
+.s-fixed-n {
+  flex-grow: 0;
+  flex-shrink: 1;
+  width: var(--s);
+  height: var(--s);
+}
+
+/* Sets to HTML defaults */
+.w-initial {
+  width: initial;
+}
+
+.h-initial {
+  height: initial;
+}
+
+.s-initial {
+  height: initial;
+  width: initial;
+}
+
+/* Reverts back to what it was previously set in CSS */
+.w-revert {
+  width: revert;
+}
+
+.h-revert {
+  height: revert;
+}
+
+.s-revert {
+  height: revert;
+  width: revert;
+}
+
+/*
+Single Panel Layout Classes
+  Single Axis Layout Classes
+    Packed Layout Classes
+ */
+
+.layout-packed-tl-x {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.layout-packed-tc-x {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.layout-packed-tr-x {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.layout-packed-ml-x {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.layout-packed-mc-x {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout-packed-mr-x {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.layout-packed-bl-x {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.layout-packed-bc-x {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.layout-packed-br-x {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.layout-packed-tl-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.layout-packed-tc-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.layout-packed-tr-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.layout-packed-ml-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.layout-packed-mc-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.layout-packed-mr-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.layout-packed-bl-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.layout-packed-bc-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.layout-packed-br-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+/*
+Single Panel Layout Classes
+  Single Axis Layout Classes
+    Spaced Layout Classes
+ */
+.layout-spaced-t {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.layout-spaced-m {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layout-spaced-b {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.layout-spaced-l {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.layout-spaced-c {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.layout-spaced-r {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+/*
+Single Panel Layout Classes
+  Grid Layout Classes
+ */
+.layout-grid-tl {
+  display: grid;
+  align-items: start;
+  justify-items: start;
+}
+
+.layout-grid-tc {
+  display: grid;
+  align-items: start;
+  justify-items: center;
+}
+
+.layout-grid-tr {
+  display: grid;
+  align-items: start;
+  justify-items: end;
+}
+
+.layout-grid-ml {
+  display: grid;
+  align-items: center;
+  justify-items: start;
+}
+
+.layout-grid-mc {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.layout-grid-mr {
+  display: grid;
+  align-items: center;
+  justify-items: end;
+}
+
+.layout-grid-bl {
+  display: grid;
+  align-items: end;
+  justify-items: start;
+}
+
+.layout-grid-bc {
+  display: grid;
+  align-items: end;
+  justify-items: center;
+}
+
+.layout-grid-br {
+  display: grid;
+  align-items: end;
+  justify-items: end;
+}
+
+/* Sets to HTML defaults */
+.w-initial {
+  width: initial;
+}
+
+.h-initial {
+  height: initial;
+}
+
+.s-initial {
+  height: initial;
+  width: initial;
+}
+
+/* Reverts back to what it was previously set in CSS */
+.w-revert {
+  width: revert;
+}
+
+.h-revert {
+  height: revert;
+}
+
+.s-revert {
+  height: revert;
+  width: revert;
+}
