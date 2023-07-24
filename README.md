@@ -1,4 +1,4 @@
-# 🛌 @layout-css/plain-css
+# 🛌 @layouts-css/plain-css
 
 > Easy-to-understand layout classes for css, inspired by Figma's Auto Layout and repeatedly having to figure out common website layouts. In plain css!
 
@@ -15,7 +15,7 @@ Sleep like a baby and kiss those flexbox & CSS grid nightmares goodbye! Rest wel
 
 Yes - you can center a div with ease 😌
 
-layout-css makes it a breeze to layout HTML with it's easy-to-understand CSS layout classes. As a Tailwind CSS plugin, you can combine layout-css's intuitive layout classes with the power of Tailwind CSS.
+layouts-css makes it a breeze to layout HTML with it's easy-to-understand CSS layout classes. As a Tailwind CSS plugin, you can combine layouts-css's intuitive layout classes with the power of Tailwind CSS.
 <br/>
 
 <hr/>
@@ -26,16 +26,16 @@ layout-css makes it a breeze to layout HTML with it's easy-to-understand CSS lay
 
 load latest
 
-`https://cdn.jsdelivr.net/gh/layout-css/plain-css/layout.css`
+`https://cdn.jsdelivr.net/gh/layouts-css/plain-css/layout.css`
 
 load specific version vMAJOR.MINOR.PATCH
 
-`https://cdn.jsdelivr.net/gh/layout-css/plain-css@M.m.p/layout.css`
+`https://cdn.jsdelivr.net/gh/layouts-css/plain-css@M.m.p/layout.css`
 
 use a version range instead of a specific version
 
-`https://cdn.jsdelivr.net/gh/layout-css/plain-css@M.m/layout.css`
-`https://cdn.jsdelivr.net/gh/layout-css/plain-css@M/layout.css`
+`https://cdn.jsdelivr.net/gh/layouts-css/plain-css@M.m/layout.css`
+`https://cdn.jsdelivr.net/gh/layouts-css/plain-css@M/layout.css`
 
 #### OR Copy and Paste what you need from the docs
 
@@ -177,7 +177,7 @@ Example:
 
 ## Key Concepts
 
-layout-css builds on the idea of utility-first classes popularised by [Tailwind CSS](https://tailwindcss.com/) and introduces the concept of layout classes. The diference is that utility-first clasess wrap a single concept in css where as the a layout class wraps multiple to achive an intent.
+layouts-css builds on the idea of utility-first classes popularised by [Tailwind CSS](https://tailwindcss.com/) and introduces the concept of layout classes. The diference is that utility-first clasess wrap a single concept in css where as the a layout class wraps multiple to achive an intent.
 
 ### Sizing Layout Classes
 
@@ -193,8 +193,8 @@ Single-panel layout clasess decribe how the child elements behave in the contain
 
 #### Single Axis (x or y)
 
-> **💡 TIP** single axis layouts map directly to the [_Auto-Layout_](https://help.figma.com/hc/en-us/articles/5731482952599-Using-auto-layout) features in the popular design tool [![figma-logo](https://github.com/layout-css/.github/assets/1035439/772f3948-9167-477b-97ec-79253a397ec1)](https://figma.com)
-> and is the inspiration for this library. For each implementation of layout-css the docs will specify how the class maps to Figma Auto-Layout controls.
+> **💡 TIP** single axis layouts map directly to the [_Auto-Layout_](https://help.figma.com/hc/en-us/articles/5731482952599-Using-auto-layout) features in the popular design tool [![figma-logo](https://github.com/layouts-css/.github/assets/1035439/772f3948-9167-477b-97ec-79253a397ec1)](https://figma.com)
+> and is the inspiration for this library. For each implementation of layouts-css the docs will specify how the class maps to Figma Auto-Layout controls.
 
 - spacing: packed together or spaced apart
 - **horizontal-alignment**: of child elements in the parent container<br/>
@@ -225,16 +225,16 @@ Responsisve-mulit-panel layout classes describe the behaviours commonly seen on 
 
 Figma is a popular tool for designing websites and apps. The Auto Layout Feature dyanmically arranges elements on the page so you don't have to manually position everything when resizing a component.
 
-The folloing image features the Auto Layout controls in Figma. The table details what can be done out-of-the box with layout-css and where Custom CSS is required.
+The folloing image features the Auto Layout controls in Figma. The table details what can be done out-of-the box with layouts-css and where Custom CSS is required.
 
 ![Figma Controls](docs/images/figma-control/explaination.png)
 
 | Figma Control                                                                             | CSS Approach                                                                                   |
 | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| <span style="color:">1.a.</span> Horizontal resizing <br> 1.b. Verical resizing           | @layout-css/plain-css <br>[Figma Component Resizing](#sizing)                                  |
+| <span style="color:">1.a.</span> Horizontal resizing <br> 1.b. Verical resizing           | @layouts-css/plain-css <br>[Figma Component Resizing](#sizing)                                 |
 | 2. Corner radius                                                                          | Custom CSS <br>[Border Radius](https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius) |
 | 3. Visability if overflow                                                                 | Custom CSS <br>[Overflow](https://developer.mozilla.org/en-US/docs/Web/CSS/overflow)           |
-| 4.a. Direction child components flow <br> 4.b. Alignment of child components in container | @layout-css/plain-css <br> [Sizing](#sizing)                                                   |
+| 4.a. Direction child components flow <br> 4.b. Alignment of child components in container | @layouts-css/plain-css <br> [Sizing](#sizing)                                                  |
 | 5. Space between child components                                                         | Custom CSS <br> [Gap](https://developer.mozilla.org/en-US/docs/Web/CSS/gap)                    |
 | 6.a. Horizontal padding, 6.b. Vertical padding                                            | Custom CSS <br> [Padding](https://developer.mozilla.org/en-US/docs/Web/CSS/padding)            |
 
@@ -1133,7 +1133,7 @@ Use `layout-revert-html` sets the html defaults using the CSS `revert` property.
 
 <br/>
 
-Controlling size and resizing behavior in CSS through the specification of properties on both parent and child elements can be challenging. 🛌 layout-css simplifies this process by giving control to the child component for resizing within the parent. This library shares the same opinion as Figma, advocating for child components to dictate their own resizing behavior.
+Controlling size and resizing behavior in CSS through the specification of properties on both parent and child elements can be challenging. 🛌 layouts-css simplifies this process by giving control to the child component for resizing within the parent. This library shares the same opinion as Figma, advocating for child components to dictate their own resizing behavior.
 
 <br/>
 
@@ -1204,9 +1204,9 @@ Shorthand helper class for setting the same width and height property.
 
 If you are interested in comparing layouts with and without check out the following Tailwind CSS play links:
 
-- ❌ [Without layout-css](https://) **🚧 Coming Soon**
+- ❌ [Without layouts-css](https://) **🚧 Coming Soon**
 
-- ✅ [With layout-css](https://) **🚧 Coming Soon**
+- ✅ [With layouts-css](https://) **🚧 Coming Soon**
 
 <br>
 
@@ -1216,13 +1216,13 @@ This is a list of questions so far. Join the [Tailwind Discord]("https://tailwin
 
 <br>
 
-##### Q: Do I need Tailwind CSS to use this layout-css?
+##### Q: Do I need Tailwind CSS to use this layouts-css?
 
 A: Hopefully not for long
 _**🚧 Coming soon**_
 
-- [@layout-css/plain-css](https://github.com/layout-css/plain-css)
-- [@layout-css/vanilla-extract](https://github.com/layout-css/vanilla-extract) (CSS in JS/TS)
+- [@layouts-css/plain-css](https://github.com/layouts-css/plain-css)
+- [@layouts-css/vanilla-extract](https://github.com/layouts-css/vanilla-extract) (CSS in JS/TS)
 
 <br>
 
